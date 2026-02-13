@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Digital | Artes Multimediales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="img/fondo-pixel.png" id="random-bg" alt="Fondo Textura">
+
+    <main id="index-screen" class="active">
+        <div class="index-content">
+            <header>
+                <h1>bitacora digital</h1>
+                <h2>I.A. Aplicada al Arte Multimedial</h2>
+            </header>
+            
+            <nav class="menu">
+                <ul>
+                    <li><button class="module-link" data-target="module-1">01. historia y problemáticas</button></li>
+                    <li><button class="module-link" data-target="module-2">02. imagen y video generativo</button></li>
+                    <li><button class="module-link" data-target="module-3">03. sonido generativo</button></li>
+                    <li><button class="module-link" data-target="module-4">04. LLMs y agentes</button></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <section id="viewer-container">
+        
+        <button id="back-btn">
+            <span>&larr; volver</span>
+        </button>
+
+        <div id="module-1" class="horizontal-scroll-wrapper">
+            <div class="intro-block">
+                <h1>01</h1>
+                <h3>HISTORIA Y<br>PROBLEMÁTICAS</h3>
+                <p>Exploración teórica del campo.</p>
+            </div>
+
+            <article class="item-card">
+                <details>
+                    <summary>
+                        <span class="id">1.1</span>
+                        <div class="placeholder-img" style="background-color: #333;">
+                            </div>
+                        <h4>Arqueología de los Medios</h4>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>Análisis sobre la evolución de los dispositivos técnicos.</p>
+                        <div class="placeholder-text"></div>
+                    </div>
+                </details>
+            </article>
+
+            <article class="item-card">
+                <details>
+                    <summary>
+                        <span class="id">1.2</span>
+                        <div class="placeholder-img" style="background-color: #444;"></div>
+                        <h4>Estética del Error</h4>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>Ensayo sobre el Glitch Art.</p>
+                        <div class="placeholder-text"></div>
+                    </div>
+                </details>
+            </article>
+            
+            <div class="spacer"></div>
+        </div>
+
+        <div id="module-2" class="horizontal-scroll-wrapper">
+            <div class="intro-block">
+                <h1>02</h1>
+                <h3>IMAGEN Y<br>VIDEO</h3>
+                <p>TouchDesigner & Stable Diffusion.</p>
+            </div>
+
+            <article class="item-card">
+                <details>
+                    <summary>
+                        <span class="id">2.1</span>
+                        <div class="placeholder-img" style="background-color: #2a2a2a;"></div>
+                        <h4>Feedback Loops</h4>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>Experimentos con retroalimentación de video.</p>
+                        <div class="placeholder-text">Prompt: "Infinite recursive television..."</div>
+                    </div>
+                </details>
+            </article>
+
+            <article class="item-card">
+                <details>
+                    <summary>
+                        <span class="id">2.2</span>
+                        <div class="placeholder-img" style="background-color: #3a3a3a;"></div>
+                        <h4>Latent Space Walk</h4>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>Navegación por el espacio latente.</p>
+                        </div>
+                </details>
+            </article>
+            
+            <div class="spacer"></div>
+        </div>
+
+        <div id="module-3" class="horizontal-scroll-wrapper">
+            <div class="intro-block">
+                <h1>03</h1>
+                <h3>SONIDO<br>GENERATIVO</h3>
+                <p>Síntesis y Pure Data.</p>
+            </div>
+             <article class="item-card">
+                <details>
+                    <summary>
+                        <span class="id">3.1</span>
+                        <div class="placeholder-img" style="background-color: #1a1a1a;"></div>
+                        <h4>Osciladores Caóticos</h4>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>Patch de Pure Data.</p>
+                        </div>
+                </details>
+            </article>
+            <div class="spacer"></div>
+        </div>
+
+        <div id="module-4" class="horizontal-scroll-wrapper">
+            <div class="intro-block">
+                <h1>04</h1>
+                <h3>LLMs Y<br>AGENTES</h3>
+                <p>Inteligencia Artificial y Texto.</p>
+            </div>
+            <article class="item-card">
+                <details>
+                    <summary>
+                        <span class="id">4.1</span>
+                        <div class="placeholder-img" style="background-color: #111;"></div>
+                        <h4>Cadáver Exquisito IA</h4>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>Colaboración humano-máquina.</p>
+                        </div>
+                </details>
+            </article>
+            <div class="spacer"></div>
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
