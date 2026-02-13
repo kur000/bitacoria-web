@@ -1,3 +1,5 @@
+System Prompt para facilitar el codeo del TP Integrador con asistencia de un LLM
+
 # PROMPT: Generador de Sitio Web "Bitácora Digital Interactiva"
 
 ## ROL
