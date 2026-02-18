@@ -142,4 +142,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-});
+    // ... (todo tu código anterior dentro del DOMContentLoaded) ...
+
+    // --- 4. LÓGICA DEL MODAL FULLSCREEN (NUEVO) ---
+    
+    // Referencias a los elementos
+    // Usamos la clase específica que añadimos a la imagen en el HTML
+    const triggerImg1 = document.querySelector('.trigger-articulo-1');
+    const modal1 = document.getElementById('fullscreen-modal-1');
+    
+    if (triggerImg1 && modal1) {
+        const closeBtn1 = modal1.querySelector('.close-modal-btn');
+
+        // FUNCIÓN ABRIR
+        triggerImg1.addEventListener('click', (e) => {
+            // CRÍTICO: Evita que el clic se propague al <summary> y abra la tarjeta pequeña
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Activar modal
+            modal1.classList.add('active');
+            
+            // Opcional: Bloquear el scroll del body si fuera necesario, 
+            // aunque tu body ya tiene overflow:hidden, así que no es crítico.
+        });
+
+        // FUNCIÓN CERRAR (Botón X)
+        closeBtn1.addEventListener('click', () => {
+            modal1.classList.remove('active');
+        });
+
+        // FUNCIÓN CERRAR (Tecla ESC)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal1.classList.contains('active')) {
+                modal1.classList.remove('active');
+            }
+        });
+    }
+
+    // --- LÓGICA MODAL 5.1 ---
+    const triggerImg5 = document.querySelector('.trigger-articulo-5');
+    const modal5 = document.getElementById('fullscreen-modal-5');
+    
+    if (triggerImg5 && modal5) {
+        const closeBtn5 = modal5.querySelector('.close-modal-btn');
+
+        triggerImg5.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation(); // Evita abrir el acordeón
+            modal5.classList.add('active');
+        });
+
+        closeBtn5.addEventListener('click', () => {
+            modal5.classList.remove('active');
+        });
+
+        // Cierre con tecla ESC (opcional si quieres que funcione para ambos)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal5.classList.remove('active');
+            }
+        });
+    }
+
+}); // <-- FIN DEL DOMContentLoaded

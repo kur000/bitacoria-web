@@ -398,3 +398,173 @@ summary h4 { font-size: 1.2rem; font-weight: 400; margin-top: auto; }
     color: #bebebe !important; 
     text-shadow: none;
 }
+
+/* --- ESTILOS PARA LA IMAGEN EN LA TARJETA --- */
+/* --- ESTILOS PARA LA IMAGEN EN LA TARJETA --- */
+/* --- ESTILOS PARA LA IMAGEN EN LA TARJETA (CUADRADA) --- */
+.card-preview-img {
+    width: 100%;
+    
+    /* ESTO FUERZA QUE SEA UN CUADRADO PERFECTO SIEMPRE */
+    aspect-ratio: 1 / 1; 
+    
+    /* 'cover' llena el cuadrado.
+       La imagen se ajusta al ancho y recorta lo que sobre de alto (o viceversa)
+       para no dejar espacios vacíos ni deformarse. */
+    object-fit: cover; 
+    
+    /* Opcional: Centrar la imagen para que el recorte sea equilibrado */
+    object-position: center;
+
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer; 
+}
+
+.card-preview-img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2);
+}
+
+.card-preview-img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2);
+}
+
+/* =========================================
+   MODAL FULLSCREEN
+   ========================================= */
+.fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000; /* Por encima de todo, incluso del botón volver */
+    
+    /* Estilo Glassmorphism oscuro y muy desenfocado para el fondo */
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    /* Estado inicial: oculto y sin interacción */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    
+    /* Animación de entrada suave */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    /* Para centrar el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+/* ESTADO ACTIVO (Cuando se abre) */
+.fullscreen-modal.active {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+
+/* --- BOTÓN CERRAR (CRUZ) --- */
+.close-modal-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2010;
+    
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg); /* Pequeña animación al hover */
+}
+
+/* --- CONTENEDOR DEL ARTÍCULO --- */
+.modal-article-container {
+    width: 100%;
+    max-width: 900px; /* Ancho máximo de lectura */
+    height: 100vh;
+    overflow-y: auto; /* Permite scroll vertical dentro del modal */
+    
+    /* Animación de entrada del contenido (un ligero desplazamiento hacia arriba) */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s 0.2s cubic-bezier(0.23, 1, 0.32, 1); /* Delay de 0.2s */
+    
+    padding-bottom: 100px; /* Espacio final */
+}
+
+/* Cuando el modal está activo, el contenido aparece */
+.fullscreen-modal.active .modal-article-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ocultar barra de scroll del modal */
+.modal-article-container::-webkit-scrollbar { display: none; }
+.modal-article-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+/* --- ESTILOS DEL CONTENIDO INTERNO --- */
+/* BUSCA ESTA REGLA EN TU CSS Y REEMPLÁZALA */
+.modal-hero-img {
+    /* Ancho automático para respetar proporción */
+    width: auto;
+    /* Ancho máximo del 100% del contenedor padre para no salirse */
+    max-width: 100%;
+    /* Altura máxima del 80% de la pantalla para que no sea excesiva */
+    max-height: 80vh; 
+    
+    /* CAMBIO CLAVE: Muestra la imagen entera sin recortar */
+    object-fit: contain; 
+    
+    /* Centra la imagen horizontalmente si es más angosta que el texto */
+    display: block;
+    margin: 2rem auto; /* 2rem de margen inferior para separar del texto */
+    
+    /* Opcional: Bordes redondeados para que coincida con la estética */
+    border-radius: 8px;
+}
+
+.modal-text-body {
+    padding: 40px;
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.modal-text-body h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.modal-text-body h3 {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #eee;
+}
+
+.modal-text-body p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
