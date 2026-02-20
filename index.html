@@ -20,9 +20,9 @@
             <nav class="menu">
                 <ul>
                     <li><button class="module-link" data-target="module-1">01. historia y problemáticas</button></li>
-                <!-- <li><button class="module-link" data-target="module-2">02. imagen y video generativo</button></li>
-                    <li><button class="module-link" data-target="module-3">03. sonido generativo</button></li>
-                    <li><button class="module-link" data-target="module-4">04. arte generativo y código</button></li> -->
+                <!-- <li><button class="module-link" data-target="module-2">02. imagen y video generativo</button></li>-->
+                    <li><button class="module-link" data-target="module-3">03. código generativo</button></li>
+                <!--     <li><button class="module-link" data-target="module-4">04. arte generativo y código</button></li> -->
                     <li><button class="module-link" data-target="module-5">05. LLMs y agentes</button></li>
                 </ul>
             </nav>
@@ -105,16 +105,21 @@
         <div id="module-3" class="horizontal-scroll-wrapper">
             <div class="intro-block">
                 <h1>03</h1>
-                <h3>SONIDO<br>GENERATIVO</h3>
-                <p>Generacion de sonido a partir de imagen</p>
+                <h3>CODIGO<br>GENERATIVO</h3>
+                <p></p>
             </div>
-             <article class="item-card">
+            <article class="item-card">
                 <details>
                     <summary>
                         <span class="id">3.1</span>
-                        <div class="placeholder-img" style="background-color: #1a1a1a;"></div>
-                        <h4>Osciladores Caóticos</h4>
+                        <img src="img/codigo-gen.png"  
+                             class="card-preview-img trigger-articulo-3">                        
+                        <h4>Trabajo Práctico</h4>
+                        <span class="id">Domo web lleno de outputs de ComfyUI</span>
                     </summary>
+                    <div class="expanded-content">
+                        <p>Haz clic en la imagen superior para ver el detalle sobre Osciladores Caóticos.</p>
+                    </div>
                 </details>
             </article>
             <div class="spacer"></div>
@@ -187,7 +192,41 @@
             </article>
         </div>
     </div>
-<div id="fullscreen-modal-5" class="fullscreen-modal">
+    <div id="fullscreen-modal-3" class="fullscreen-modal">
+    
+    <button class="close-modal-btn">✕</button>
+    
+    <div class="modal-article-container">
+        
+        <article class="modal-text-body">
+            <h2>Vibecoding - ComfyUI Outputs</h2>
+            
+            <p>Como trabajo práctico de este módulo, desarrollé una web que funciona como una especie de muro de imágenes, donde quería ir subiendo <em>outputs</em> del módulo 2 de la Diplomatura.</p>
+
+            <p>Mi idea fue hacerlo <em>online</em> y colaborativo, y abrirlo para que el resto de lxs compañerxs pudieran subir sus imágenes. Logré avanzar mucho en esto, pero no llegué a hacer la parte de "subida" de imágenes, así que quedó como un proyecto personal nomás. Creo que este módulo fue mi favorito de la Diplomatura; aun teniendo conocimientos de programación, realmente me brindó alcance a herramientas que jamás pensé que pudiera llegar a usar por el tiempo que requiere su dominio, a un nivel muy avanzado.</p>
+
+            <p>El hecho de poder desarrollar webs en tan poco tiempo y con tal nivel de expresividad es increíble. Logré resultados muy cercanos a lo que me imaginaba solo <em>vibe-codeando</em> y usando lenguaje súper coloquial; eso sí, en inglés. A continuación, dejo el sitio que realicé como trabajo práctico del módulo</p> 
+
+            <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: #eee; font-size: 1.5rem;">Sitio Web: Trabajo Práctico</h3>
+            <div style="width: 100%; height: 600px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; background: #000;">
+                <iframe src="https://kur000.github.io/tp_codigo_diploia/" width="100%" height="100%" style="border: none;"></iframe>
+            </div>
+
+            <p>Además, dejo una visualización en video del resultado que tuve a partir del primer <em>prompteo</em> para la bitácora web, que asistido por un buen <em>System Prompt</em>, me dejó muy cerca —en un solo intercambio— del sitio final que buscaba para exponer mi proceso en la Diplomatura.</p>
+
+            <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: #eee; font-size: 1.5rem;">Video: Resultado del Primer Prompteo</h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #000; margin-bottom: 2rem;">
+                <iframe src="https://www.youtube.com/embed/6Wi1IMsBjb0" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+        </article>
+    </div>
+</div>
+    <div id="fullscreen-modal-5" class="fullscreen-modal">
         
         <button class="close-modal-btn">✕</button>
         

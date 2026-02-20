@@ -204,5 +204,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // --- LÓGICA MODAL 3.1 ---
+    const triggerImg3 = document.querySelector('.trigger-articulo-3');
+    const modal3 = document.getElementById('fullscreen-modal-3');
+    
+    if (triggerImg3 && modal3) {
+        const closeBtn3 = modal3.querySelector('.close-modal-btn');
+
+        triggerImg3.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation(); // Evita abrir el acordeón
+            modal3.classList.add('active');
+        });
+
+        closeBtn3.addEventListener('click', () => {
+            modal3.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal3.classList.contains('active')) {
+                modal3.classList.remove('active');
+            }
+        });
+    }
 
 }); // <-- FIN DEL DOMContentLoaded
